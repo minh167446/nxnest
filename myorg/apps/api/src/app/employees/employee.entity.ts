@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryColumn, JoinColumn, OneToMany} from 'typeorm';
+import { Column, Entity, PrimaryColumn} from 'typeorm';
 import { Assignment } from '../assignment/assignment.entity';
 
 @Entity('employees')

@@ -1,38 +1,33 @@
 import { Module } from '@nestjs/common';
-
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { EmployeeModule } from './employees/employee.module';
-import { DepartmentModule } from './department/department.module';
-import { AssignmentModule } from './assignment/assignment.module';
-import { Position } from './position/position.entity';
-import { PositionModule } from './position/position.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
-import { Employee } from './employees/employee.entity';
-import { Department } from './department/department.entity';
-import { Assignment } from './assignment/assignment.entity';
+import { AitCoreModule, entities } from '@aureole/core';
+import { dbConfig } from '@aureole/core';
+import { controllers, services } from '@aureole/core';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+import { Group } from './group/group.entity';
+import { GroupModule } from './group/group.module';
+import { PersonModule } from './person/person.module';
+import { Person } from './person/person.entity';
+import { GroupController } from './group/group.controller';
+import { PersonController } from './person/person.controller';
+import { GroupService } from './group/group.service';
+import { PersonService } from './person/person.service';
 
 @Module({
   imports: [
-    EmployeeModule,
-    DepartmentModule,
-    AssignmentModule,
-    PositionModule,
+    // GroupModule,
+    // PersonModule,
+    AitCoreModule,
     TypeOrmModule.forRoot({
-      "type": "postgres",
-    "host": "192.168.136.84",
-    "port": 5432,
-    "username": "postgres",
-    "password": "123456",
-    "database": "postgres",
-    "entities": [Employee,Department, Position, Assignment],
-    "synchronize": true,
-    "logging": false
+     ...dbConfig,
+     entities: [...entities, Group, Person]
     }),
+    TypeOrmModule.forFeature([...entities, Group, Person])
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [...controllers, AppController, GroupController, PersonController],
+  providers: [...services, AppService, GroupService, PersonService],
 })
  export class AppModule {
  constructor(private readonly connection: Connection) {}

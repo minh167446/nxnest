@@ -6,11 +6,18 @@
 import { NestFactory } from '@nestjs/core';
 import { Logger } from '@nestjs/common';
 import { AppModule } from './app/app.module';
-
+import { ValidationPipe } from '../src/validation.pipe';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  // const validationPipe = app
+  //       .select(AppModule)
+  //       .get(ValidationPipe);
+
+  // This will cause class-validator to use the nestJS module resolution, 
+  // the fallback option is to spare our selfs from importing all the class-validator modules to nestJS
   const globalPrefix = 'api/v1';
+  app.useGlobalPipes(new ValidationPipe());
   app.setGlobalPrefix(globalPrefix);
   app.enableCors();
   const port = process.env.port || 8080;

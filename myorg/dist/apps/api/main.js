@@ -153,20 +153,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
 /* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _app_controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.controller */ "./apps/api/src/app/app.controller.ts");
-/* harmony import */ var _app_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.service */ "./apps/api/src/app/app.service.ts");
-/* harmony import */ var _employees_employee_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./employees/employee.module */ "./apps/api/src/app/employees/employee.module.ts");
-/* harmony import */ var _department_department_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./department/department.module */ "./apps/api/src/app/department/department.module.ts");
-/* harmony import */ var _assignment_assignment_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assignment/assignment.module */ "./apps/api/src/app/assignment/assignment.module.ts");
-/* harmony import */ var _position_position_entity__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./position/position.entity */ "./apps/api/src/app/position/position.entity.ts");
-/* harmony import */ var _position_position_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./position/position.module */ "./apps/api/src/app/position/position.module.ts");
-/* harmony import */ var _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @nestjs/typeorm */ "@nestjs/typeorm");
-/* harmony import */ var _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_nestjs_typeorm__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! typeorm */ "typeorm");
-/* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(typeorm__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _employees_employee_entity__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./employees/employee.entity */ "./apps/api/src/app/employees/employee.entity.ts");
-/* harmony import */ var _department_department_entity__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./department/department.entity */ "./apps/api/src/app/department/department.entity.ts");
-/* harmony import */ var _assignment_assignment_entity__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./assignment/assignment.entity */ "./apps/api/src/app/assignment/assignment.entity.ts");
+/* harmony import */ var _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @nestjs/typeorm */ "@nestjs/typeorm");
+/* harmony import */ var _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! typeorm */ "typeorm");
+/* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(typeorm__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _aureole_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @aureole/core */ "@aureole/core");
+/* harmony import */ var _aureole_core__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_aureole_core__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _app_controller__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.controller */ "./apps/api/src/app/app.controller.ts");
+/* harmony import */ var _app_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.service */ "./apps/api/src/app/app.service.ts");
+/* harmony import */ var _group_group_entity__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./group/group.entity */ "./apps/api/src/app/group/group.entity.ts");
+/* harmony import */ var _person_person_entity__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./person/person.entity */ "./apps/api/src/app/person/person.entity.ts");
+/* harmony import */ var _group_group_controller__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./group/group.controller */ "./apps/api/src/app/group/group.controller.ts");
+/* harmony import */ var _person_person_controller__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./person/person.controller */ "./apps/api/src/app/person/person.controller.ts");
+/* harmony import */ var _group_group_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./group/group.service */ "./apps/api/src/app/group/group.service.ts");
+/* harmony import */ var _person_person_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./person/person.service */ "./apps/api/src/app/person/person.service.ts");
+
 
 
 
@@ -189,26 +190,16 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Module"])({
             imports: [
-                _employees_employee_module__WEBPACK_IMPORTED_MODULE_4__["EmployeeModule"],
-                _department_department_module__WEBPACK_IMPORTED_MODULE_5__["DepartmentModule"],
-                _assignment_assignment_module__WEBPACK_IMPORTED_MODULE_6__["AssignmentModule"],
-                _position_position_module__WEBPACK_IMPORTED_MODULE_8__["PositionModule"],
-                _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_9__["TypeOrmModule"].forRoot({
-                    "type": "postgres",
-                    "host": "192.168.136.84",
-                    "port": 5432,
-                    "username": "postgres",
-                    "password": "123456",
-                    "database": "postgres",
-                    "entities": [_employees_employee_entity__WEBPACK_IMPORTED_MODULE_11__["Employee"], _department_department_entity__WEBPACK_IMPORTED_MODULE_12__["Department"], _position_position_entity__WEBPACK_IMPORTED_MODULE_7__["Position"], _assignment_assignment_entity__WEBPACK_IMPORTED_MODULE_13__["Assignment"]],
-                    "synchronize": true,
-                    "logging": false
-                }),
+                // GroupModule,
+                // PersonModule,
+                _aureole_core__WEBPACK_IMPORTED_MODULE_4__["AitCoreModule"],
+                _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__["TypeOrmModule"].forRoot(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, _aureole_core__WEBPACK_IMPORTED_MODULE_4__["dbConfig"], { entities: _aureole_core__WEBPACK_IMPORTED_MODULE_4__["entities"].concat([_group_group_entity__WEBPACK_IMPORTED_MODULE_7__["Group"], _person_person_entity__WEBPACK_IMPORTED_MODULE_8__["Person"]]) })),
+                _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__["TypeOrmModule"].forFeature(_aureole_core__WEBPACK_IMPORTED_MODULE_4__["entities"].concat([_group_group_entity__WEBPACK_IMPORTED_MODULE_7__["Group"], _person_person_entity__WEBPACK_IMPORTED_MODULE_8__["Person"]]))
             ],
-            controllers: [_app_controller__WEBPACK_IMPORTED_MODULE_2__["AppController"]],
-            providers: [_app_service__WEBPACK_IMPORTED_MODULE_3__["AppService"]],
+            controllers: _aureole_core__WEBPACK_IMPORTED_MODULE_4__["controllers"].concat([_app_controller__WEBPACK_IMPORTED_MODULE_5__["AppController"], _group_group_controller__WEBPACK_IMPORTED_MODULE_9__["GroupController"], _person_person_controller__WEBPACK_IMPORTED_MODULE_10__["PersonController"]]),
+            providers: _aureole_core__WEBPACK_IMPORTED_MODULE_4__["services"].concat([_app_service__WEBPACK_IMPORTED_MODULE_6__["AppService"], _group_group_service__WEBPACK_IMPORTED_MODULE_11__["GroupService"], _person_person_service__WEBPACK_IMPORTED_MODULE_12__["PersonService"]]),
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_a = typeof typeorm__WEBPACK_IMPORTED_MODULE_10__["Connection"] !== "undefined" && typeorm__WEBPACK_IMPORTED_MODULE_10__["Connection"]) === "function" ? _a : Object])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_a = typeof typeorm__WEBPACK_IMPORTED_MODULE_3__["Connection"] !== "undefined" && typeorm__WEBPACK_IMPORTED_MODULE_3__["Connection"]) === "function" ? _a : Object])
     ], AppModule);
     return AppModule;
 }());
@@ -255,1020 +246,1101 @@ var AppService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./apps/api/src/app/assignment/Assignment.entity.ts":
-/*!**********************************************************!*\
-  !*** ./apps/api/src/app/assignment/Assignment.entity.ts ***!
-  \**********************************************************/
-/*! exports provided: Assignment */
+/***/ "./apps/api/src/app/group/create-group.dto.ts":
+/*!****************************************************!*\
+  !*** ./apps/api/src/app/group/create-group.dto.ts ***!
+  \****************************************************/
+/*! exports provided: CreateGroupDto */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Assignment", function() { return Assignment; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreateGroupDto", function() { return CreateGroupDto; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "tslib");
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! typeorm */ "typeorm");
-/* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(typeorm__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var class_validator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! class-validator */ "class-validator");
+/* harmony import */ var class_validator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(class_validator__WEBPACK_IMPORTED_MODULE_1__);
 
 
-var Assignment = /** @class */ (function () {
-    function Assignment() {
+var CreateGroupDto = /** @class */ (function () {
+    function CreateGroupDto() {
     }
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["PrimaryColumn"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
-    ], Assignment.prototype, "id", void 0);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
-    ], Assignment.prototype, "idEmployee", void 0);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
-    ], Assignment.prototype, "idDepartmentName", void 0);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
-    ], Assignment.prototype, "idPosition", void 0);
-    Assignment = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Entity"])('assignment')
-    ], Assignment);
-    return Assignment;
-}());
-
-
-
-/***/ }),
-
-/***/ "./apps/api/src/app/assignment/assignment.controller.ts":
-/*!**************************************************************!*\
-  !*** ./apps/api/src/app/assignment/assignment.controller.ts ***!
-  \**************************************************************/
-/*! exports provided: assignmentController */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "assignmentController", function() { return assignmentController; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "tslib");
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
-/* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _assignment_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assignment.service */ "./apps/api/src/app/assignment/assignment.service.ts");
-/* harmony import */ var _assignment_entity__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assignment.entity */ "./apps/api/src/app/assignment/assignment.entity.ts");
-
-
-
-
-var assignmentController = /** @class */ (function () {
-    function assignmentController(assignmentService) {
-        this.assignmentService = assignmentService;
-    }
-    assignmentController.prototype.index = function () {
-        return this.assignmentService.findAll();
-    };
-    assignmentController.prototype.create = function (employData) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                return [2 /*return*/, this.assignmentService.create(employData)];
-            });
-        });
-    };
-    /* @Put(':id/update')
-     async update(@Param('id') id, @Body() emloyData: Assignment): Promise<any> {
-         emloyData.idassignment = id;
-         console.log('Update #' +  emloyData.idassignment)
-         return this.assignmentService.update( emloyData);
-     }*/
-    assignmentController.prototype.delete = function (id) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                return [2 /*return*/, this.assignmentService.delete(id)];
-            });
-        });
-    };
-    var _a, _b, _c, _d, _e;
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Get"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", []),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", typeof (_a = typeof Promise !== "undefined" && Promise) === "function" ? _a : Object)
-    ], assignmentController.prototype, "index", null);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Post"])('create'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Body"])()),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_b = typeof _assignment_entity__WEBPACK_IMPORTED_MODULE_3__["Assignment"] !== "undefined" && _assignment_entity__WEBPACK_IMPORTED_MODULE_3__["Assignment"]) === "function" ? _b : Object]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", typeof (_c = typeof Promise !== "undefined" && Promise) === "function" ? _c : Object)
-    ], assignmentController.prototype, "create", null);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Delete"])(':id/delete'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Param"])('id')),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", typeof (_d = typeof Promise !== "undefined" && Promise) === "function" ? _d : Object)
-    ], assignmentController.prototype, "delete", null);
-    assignmentController = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Controller"])('assignment'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_e = typeof _assignment_service__WEBPACK_IMPORTED_MODULE_2__["AssignmentService"] !== "undefined" && _assignment_service__WEBPACK_IMPORTED_MODULE_2__["AssignmentService"]) === "function" ? _e : Object])
-    ], assignmentController);
-    return assignmentController;
-}());
-
-
-
-/***/ }),
-
-/***/ "./apps/api/src/app/assignment/assignment.entity.ts":
-/*!**********************************************************!*\
-  !*** ./apps/api/src/app/assignment/assignment.entity.ts ***!
-  \**********************************************************/
-/*! exports provided: Assignment */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Assignment", function() { return Assignment; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "tslib");
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! typeorm */ "typeorm");
-/* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(typeorm__WEBPACK_IMPORTED_MODULE_1__);
-
-
-var Assignment = /** @class */ (function () {
-    function Assignment() {
-    }
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["PrimaryColumn"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
-    ], Assignment.prototype, "id", void 0);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
-    ], Assignment.prototype, "idEmployee", void 0);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
-    ], Assignment.prototype, "idDepartmentName", void 0);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
-    ], Assignment.prototype, "idPosition", void 0);
-    Assignment = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Entity"])('assignment')
-    ], Assignment);
-    return Assignment;
-}());
-
-
-
-/***/ }),
-
-/***/ "./apps/api/src/app/assignment/assignment.module.ts":
-/*!**********************************************************!*\
-  !*** ./apps/api/src/app/assignment/assignment.module.ts ***!
-  \**********************************************************/
-/*! exports provided: AssignmentModule */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AssignmentModule", function() { return AssignmentModule; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "tslib");
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
-/* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @nestjs/typeorm */ "@nestjs/typeorm");
-/* harmony import */ var _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _assignment_entity__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assignment.entity */ "./apps/api/src/app/assignment/assignment.entity.ts");
-/* harmony import */ var _assignment_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assignment.service */ "./apps/api/src/app/assignment/assignment.service.ts");
-/* harmony import */ var _assignment_controller__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assignment.controller */ "./apps/api/src/app/assignment/assignment.controller.ts");
-
-
-
-
-
-
-var AssignmentModule = /** @class */ (function () {
-    function AssignmentModule() {
-    }
-    AssignmentModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Module"])({
-            imports: [_nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__["TypeOrmModule"].forFeature([_assignment_entity__WEBPACK_IMPORTED_MODULE_3__["Assignment"]])],
-            providers: [_assignment_service__WEBPACK_IMPORTED_MODULE_4__["AssignmentService"]],
-            controllers: [_assignment_controller__WEBPACK_IMPORTED_MODULE_5__["assignmentController"]],
-        })
-    ], AssignmentModule);
-    return AssignmentModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./apps/api/src/app/assignment/assignment.service.ts":
-/*!***********************************************************!*\
-  !*** ./apps/api/src/app/assignment/assignment.service.ts ***!
-  \***********************************************************/
-/*! exports provided: AssignmentService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AssignmentService", function() { return AssignmentService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "tslib");
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
-/* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @nestjs/typeorm */ "@nestjs/typeorm");
-/* harmony import */ var _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Assignment_entity__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Assignment.entity */ "./apps/api/src/app/assignment/Assignment.entity.ts");
-/* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! typeorm */ "typeorm");
-/* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(typeorm__WEBPACK_IMPORTED_MODULE_4__);
-
-
-
-
-
-var AssignmentService = /** @class */ (function () {
-    function AssignmentService(AssignmentRepository) {
-        this.AssignmentRepository = AssignmentRepository;
-    }
-    AssignmentService.prototype.findAll = function () {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.AssignmentRepository.find()];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    AssignmentService.prototype.create = function (Assignment) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.AssignmentRepository.save(Assignment)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    AssignmentService.prototype.delete = function (id) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.AssignmentRepository.delete(id)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    var _a;
-    AssignmentService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__["InjectRepository"])(_Assignment_entity__WEBPACK_IMPORTED_MODULE_3__["Assignment"])),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_a = typeof typeorm__WEBPACK_IMPORTED_MODULE_4__["Repository"] !== "undefined" && typeorm__WEBPACK_IMPORTED_MODULE_4__["Repository"]) === "function" ? _a : Object])
-    ], AssignmentService);
-    return AssignmentService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./apps/api/src/app/department/department.controller.ts":
-/*!**************************************************************!*\
-  !*** ./apps/api/src/app/department/department.controller.ts ***!
-  \**************************************************************/
-/*! exports provided: DepartmentController */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DepartmentController", function() { return DepartmentController; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "tslib");
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
-/* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _department_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./department.service */ "./apps/api/src/app/department/department.service.ts");
-/* harmony import */ var _department_entity__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./department.entity */ "./apps/api/src/app/department/department.entity.ts");
-
-
-
-
-var DepartmentController = /** @class */ (function () {
-    function DepartmentController(departmentService) {
-        this.departmentService = departmentService;
-    }
-    DepartmentController.prototype.index = function () {
-        return this.departmentService.findAll();
-    };
-    DepartmentController.prototype.create = function (employData) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                return [2 /*return*/, this.departmentService.create(employData)];
-            });
-        });
-    };
-    DepartmentController.prototype.update = function (id, deparData) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                deparData.idDepartment = id;
-                console.log('Update #' + deparData.idDepartment);
-                return [2 /*return*/, this.departmentService.update(deparData)];
-            });
-        });
-    };
-    DepartmentController.prototype.delete = function (id) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                return [2 /*return*/, this.departmentService.delete(id)];
-            });
-        });
-    };
-    var _a, _b, _c, _d, _e, _f, _g;
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Get"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", []),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", typeof (_a = typeof Promise !== "undefined" && Promise) === "function" ? _a : Object)
-    ], DepartmentController.prototype, "index", null);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Post"])('create'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Body"])()),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_b = typeof _department_entity__WEBPACK_IMPORTED_MODULE_3__["Department"] !== "undefined" && _department_entity__WEBPACK_IMPORTED_MODULE_3__["Department"]) === "function" ? _b : Object]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", typeof (_c = typeof Promise !== "undefined" && Promise) === "function" ? _c : Object)
-    ], DepartmentController.prototype, "create", null);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Put"])(':id/update'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Param"])('id')), tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Body"])()),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object, typeof (_d = typeof _department_entity__WEBPACK_IMPORTED_MODULE_3__["Department"] !== "undefined" && _department_entity__WEBPACK_IMPORTED_MODULE_3__["Department"]) === "function" ? _d : Object]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", typeof (_e = typeof Promise !== "undefined" && Promise) === "function" ? _e : Object)
-    ], DepartmentController.prototype, "update", null);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Delete"])(':id/delete'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Param"])('id')),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", typeof (_f = typeof Promise !== "undefined" && Promise) === "function" ? _f : Object)
-    ], DepartmentController.prototype, "delete", null);
-    DepartmentController = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Controller"])('department'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_g = typeof _department_service__WEBPACK_IMPORTED_MODULE_2__["DepartmentService"] !== "undefined" && _department_service__WEBPACK_IMPORTED_MODULE_2__["DepartmentService"]) === "function" ? _g : Object])
-    ], DepartmentController);
-    return DepartmentController;
-}());
-
-
-
-/***/ }),
-
-/***/ "./apps/api/src/app/department/department.entity.ts":
-/*!**********************************************************!*\
-  !*** ./apps/api/src/app/department/department.entity.ts ***!
-  \**********************************************************/
-/*! exports provided: Department */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Department", function() { return Department; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "tslib");
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! typeorm */ "typeorm");
-/* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(typeorm__WEBPACK_IMPORTED_MODULE_1__);
-
-
-var Department = /** @class */ (function () {
-    function Department() {
-    }
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["PrimaryColumn"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
-    ], Department.prototype, "idDepartment", void 0);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('text'),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsNotEmpty"])({
+            message: "Company is required!"
+        }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
-    ], Department.prototype, "NameDepartment", void 0);
-    Department = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Entity"])('department')
-    ], Department);
-    return Department;
+    ], CreateGroupDto.prototype, "company", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsNotEmpty"])({
+            message: "Language is required!"
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], CreateGroupDto.prototype, "lang", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["MaxLength"])(10, {
+            message: "Code is not valid!"
+        }),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsNotEmpty"])({
+            message: "Code is required!"
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], CreateGroupDto.prototype, "code", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsString"])(),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["MaxLength"])(100, {
+            message: "Name Group is not valid!"
+        }),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsNotEmpty"])({
+            message: "Name Group is required!"
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], CreateGroupDto.prototype, "name", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsBoolean"])(),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsNotEmpty"])({
+            message: "Active Flag is required!"
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Boolean)
+    ], CreateGroupDto.prototype, "active_flag", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["MaxLength"])(20, {
+            message: "Department code is not valid!"
+        }),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsOptional"])(),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsString"])({
+            message: "Department code must be a string!"
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], CreateGroupDto.prototype, "department_code", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["MaxLength"])(250, {
+            message: "Address 1 is not valid!"
+        }),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsOptional"])(),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsString"])({
+            message: "Address 1 must be a string!"
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], CreateGroupDto.prototype, "address1", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["MaxLength"])(250, {
+            message: "Address 2 is not valid!"
+        }),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsOptional"])(),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsString"])({
+            message: "Address 2 must be a string!"
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], CreateGroupDto.prototype, "address2", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["MaxLength"])(50, {
+            message: "Telephone 1 is not valid!"
+        }),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsOptional"])(),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsString"])({
+            message: "Telephone 1 is not valid!"
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], CreateGroupDto.prototype, "tel1", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["MaxLength"])(50, {
+            message: "Telephone 2 is not valid!"
+        }),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsOptional"])(),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsString"])({
+            message: "Telephone 2 is not valid!"
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], CreateGroupDto.prototype, "tel2", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["MaxLength"])(50, {
+            message: "Email is not valid!"
+        }),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsOptional"])(),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsEmail"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], CreateGroupDto.prototype, "email", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsNumber"])(),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsNotEmpty"])({
+            message: "Change Count is required!"
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
+    ], CreateGroupDto.prototype, "change_count", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsString"])({
+            message: "EmployeeID Creator must be a string"
+        }),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["MaxLength"])(20, {
+            message: "EmployeeID Creator is not valid!"
+        }),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsNotEmpty"])({
+            message: "EmployeeID Creator is required!"
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], CreateGroupDto.prototype, "create_emp_id", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsDateString"])(),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsNotEmpty"])({
+            message: "Create DateTime is required!"
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], CreateGroupDto.prototype, "create_datetime", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsString"])(),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["MaxLength"])(20),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsNotEmpty"])({
+            message: "EmployeeID Changer is required!"
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], CreateGroupDto.prototype, "change_emp_id", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsDateString"])(),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsNotEmpty"])({
+            message: "EmployeeID Changer is required!"
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], CreateGroupDto.prototype, "change_datetime", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["IsNotEmpty"])({
+            message: "Data Flag is required!"
+        }),
+        Object(class_validator__WEBPACK_IMPORTED_MODULE_1__["Length"])(1),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], CreateGroupDto.prototype, "data_flag", void 0);
+    return CreateGroupDto;
 }());
 
 
 
 /***/ }),
 
-/***/ "./apps/api/src/app/department/department.module.ts":
-/*!**********************************************************!*\
-  !*** ./apps/api/src/app/department/department.module.ts ***!
-  \**********************************************************/
-/*! exports provided: DepartmentModule */
+/***/ "./apps/api/src/app/group/group.controller.ts":
+/*!****************************************************!*\
+  !*** ./apps/api/src/app/group/group.controller.ts ***!
+  \****************************************************/
+/*! exports provided: GroupController */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DepartmentModule", function() { return DepartmentModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GroupController", function() { return GroupController; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "tslib");
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
 /* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @nestjs/typeorm */ "@nestjs/typeorm");
-/* harmony import */ var _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _department_entity__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./department.entity */ "./apps/api/src/app/department/department.entity.ts");
-/* harmony import */ var _department_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./department.service */ "./apps/api/src/app/department/department.service.ts");
-/* harmony import */ var _department_controller__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./department.controller */ "./apps/api/src/app/department/department.controller.ts");
+/* harmony import */ var _group_create_group_dto__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../group/create-group.dto */ "./apps/api/src/app/group/create-group.dto.ts");
+/* harmony import */ var _group_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./group.service */ "./apps/api/src/app/group/group.service.ts");
+/* harmony import */ var _validation_pipe__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../validation.pipe */ "./apps/api/src/validation.pipe.ts");
 
 
 
 
 
-
-var DepartmentModule = /** @class */ (function () {
-    function DepartmentModule() {
+var GroupController = /** @class */ (function () {
+    function GroupController(groupService) {
+        this.groupService = groupService;
     }
-    DepartmentModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Module"])({
-            imports: [_nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__["TypeOrmModule"].forFeature([_department_entity__WEBPACK_IMPORTED_MODULE_3__["Department"]])],
-            providers: [_department_service__WEBPACK_IMPORTED_MODULE_4__["DepartmentService"]],
-            controllers: [_department_controller__WEBPACK_IMPORTED_MODULE_5__["DepartmentController"]],
-        })
-    ], DepartmentModule);
-    return DepartmentModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./apps/api/src/app/department/department.service.ts":
-/*!***********************************************************!*\
-  !*** ./apps/api/src/app/department/department.service.ts ***!
-  \***********************************************************/
-/*! exports provided: DepartmentService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DepartmentService", function() { return DepartmentService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "tslib");
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
-/* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @nestjs/typeorm */ "@nestjs/typeorm");
-/* harmony import */ var _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _department_entity__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./department.entity */ "./apps/api/src/app/department/department.entity.ts");
-/* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! typeorm */ "typeorm");
-/* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(typeorm__WEBPACK_IMPORTED_MODULE_4__);
-
-
-
-
-
-var DepartmentService = /** @class */ (function () {
-    function DepartmentService(departmentRepository) {
-        this.departmentRepository = departmentRepository;
-    }
-    DepartmentService.prototype.findAll = function () {
+    GroupController.prototype.index = function (body) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
+            var error_1;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.groupService.findAll(body)];
+                    case 1: return [2 /*return*/, _a.sent()];
+                    case 2:
+                        error_1 = _a.sent();
+                        console.log(error_1);
+                        throw new _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpException"]({
+                            status: _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpStatus"].INTERNAL_SERVER_ERROR,
+                            message: 'Error!'
+                        }, 500);
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    GroupController.prototype.findOne = function (body) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var error_2;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.departmentRepository.find()];
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.groupService.findOne(body)];
                     case 1: return [2 /*return*/, _a.sent()];
+                    case 2:
+                        error_2 = _a.sent();
+                        console.log(error_2);
+                        throw new _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpException"]({
+                            status: _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpStatus"].NOT_FOUND,
+                            message: 'Not Found!'
+                        }, 400);
+                    case 3: return [2 /*return*/];
                 }
             });
         });
     };
-    DepartmentService.prototype.create = function (department) {
+    GroupController.prototype.insert = function (createGroupDto) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
+            var newGroup, result;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.departmentRepository.save(department)];
-                    case 1: return [2 /*return*/, _a.sent()];
+                    case 0:
+                        newGroup = Object.assign(createGroupDto);
+                        console.log('Insert #' + newGroup.code);
+                        return [4 /*yield*/, this.groupService.create(newGroup)];
+                    case 1:
+                        result = _a.sent();
+                        if (result === true) {
+                            throw new _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpException"]({
+                                status: _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpStatus"].OK,
+                                message: 'Create Successful!'
+                            }, 200);
+                        }
+                        else {
+                            throw new _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpException"]({
+                                status: _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpStatus"].INTERNAL_SERVER_ERROR,
+                                message: 'Error!'
+                            }, 500);
+                        }
+                        return [2 /*return*/];
                 }
             });
         });
     };
-    DepartmentService.prototype.update = function (department) {
+    GroupController.prototype.update = function (createGroupDto) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
+            var result;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.departmentRepository.update(department.idDepartment, department)];
-                    case 1: return [2 /*return*/, _a.sent()];
+                    case 0:
+                        console.log('Update #' + createGroupDto.code);
+                        return [4 /*yield*/, this.groupService.update(createGroupDto)];
+                    case 1:
+                        result = _a.sent();
+                        if (result === true) {
+                            throw new _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpException"]({
+                                status: _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpStatus"].OK,
+                                message: 'Update Successful!'
+                            }, 200);
+                        }
+                        else {
+                            throw new _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpException"]({
+                                status: _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpStatus"].INTERNAL_SERVER_ERROR,
+                                message: 'Error!'
+                            }, 500);
+                        }
+                        return [2 /*return*/];
                 }
             });
         });
     };
-    DepartmentService.prototype.delete = function (id) {
+    GroupController.prototype.deleteone = function (body) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
+            var result;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.departmentRepository.delete(id)];
-                    case 1: return [2 /*return*/, _a.sent()];
+                    case 0: return [4 /*yield*/, this.groupService.deleteOne(body)];
+                    case 1:
+                        result = _a.sent();
+                        if (result === true) {
+                            throw new _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpException"]({
+                                status: _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpStatus"].OK,
+                                message: 'Delete Successful!'
+                            }, 200);
+                        }
+                        else {
+                            throw new _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpException"]({
+                                status: _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpStatus"].NOT_FOUND,
+                                message: 'Not Found!'
+                            }, 400);
+                        }
+                        return [2 /*return*/];
                 }
             });
         });
     };
-    var _a;
-    DepartmentService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__["InjectRepository"])(_department_entity__WEBPACK_IMPORTED_MODULE_3__["Department"])),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_a = typeof typeorm__WEBPACK_IMPORTED_MODULE_4__["Repository"] !== "undefined" && typeorm__WEBPACK_IMPORTED_MODULE_4__["Repository"]) === "function" ? _a : Object])
-    ], DepartmentService);
-    return DepartmentService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./apps/api/src/app/employees/employee.controller.ts":
-/*!***********************************************************!*\
-  !*** ./apps/api/src/app/employees/employee.controller.ts ***!
-  \***********************************************************/
-/*! exports provided: EmployeeController */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmployeeController", function() { return EmployeeController; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "tslib");
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
-/* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _employee_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./employee.service */ "./apps/api/src/app/employees/employee.service.ts");
-/* harmony import */ var _employee_entity__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./employee.entity */ "./apps/api/src/app/employees/employee.entity.ts");
-
-
-
-
-var EmployeeController = /** @class */ (function () {
-    function EmployeeController(employeeService) {
-        this.employeeService = employeeService;
-    }
-    EmployeeController.prototype.index = function () {
-        return this.employeeService.findAll();
-    };
-    EmployeeController.prototype.read = function (id) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                return [2 /*return*/, this.employeeService.findId(id)];
-            });
-        });
-    };
-    EmployeeController.prototype.create = function (employData) {
+    GroupController.prototype.deletemany = function (body) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
+            var result;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                return [2 /*return*/, this.employeeService.create(employData)];
-            });
-        });
-    };
-    EmployeeController.prototype.update = function (id, emloyData) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                emloyData.idEmployee = id;
-                console.log('Update #' + emloyData.idEmployee);
-                return [2 /*return*/, this.employeeService.update(emloyData)];
-            });
-        });
-    };
-    EmployeeController.prototype.delete = function (id) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                return [2 /*return*/, this.employeeService.delete(id)];
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.groupService.deleteMany(body)];
+                    case 1:
+                        result = _a.sent();
+                        if (result === true) {
+                            throw new _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpException"]({
+                                status: _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpStatus"].OK,
+                                message: 'Selected record delete Successful!'
+                            }, 200);
+                        }
+                        else {
+                            throw new _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpException"]({
+                                status: _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpStatus"].INTERNAL_SERVER_ERROR,
+                                message: 'Error!'
+                            }, 500);
+                        }
+                        return [2 /*return*/];
+                }
             });
         });
     };
     var _a, _b, _c, _d, _e, _f, _g, _h;
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Get"])(),
+        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Post"])('get/many'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Body"])()),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", []),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Array]),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", typeof (_a = typeof Promise !== "undefined" && Promise) === "function" ? _a : Object)
-    ], EmployeeController.prototype, "index", null);
+    ], GroupController.prototype, "index", null);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Get"])(':id'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Param"])('id')),
+        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Post"])('get/one'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Body"])()),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_b = typeof String !== "undefined" && String) === "function" ? _b : Object]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object]),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", Promise)
-    ], EmployeeController.prototype, "read", null);
+    ], GroupController.prototype, "findOne", null);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Post"])('create'),
+        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Post"])('post'),
+        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["UsePipes"])(new _validation_pipe__WEBPACK_IMPORTED_MODULE_4__["ValidationPipe"]()),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Body"])()),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_c = typeof _employee_entity__WEBPACK_IMPORTED_MODULE_3__["Employee"] !== "undefined" && _employee_entity__WEBPACK_IMPORTED_MODULE_3__["Employee"]) === "function" ? _c : Object]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", typeof (_d = typeof Promise !== "undefined" && Promise) === "function" ? _d : Object)
-    ], EmployeeController.prototype, "create", null);
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_b = typeof _group_create_group_dto__WEBPACK_IMPORTED_MODULE_2__["CreateGroupDto"] !== "undefined" && _group_create_group_dto__WEBPACK_IMPORTED_MODULE_2__["CreateGroupDto"]) === "function" ? _b : Object]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", typeof (_c = typeof Promise !== "undefined" && Promise) === "function" ? _c : Object)
+    ], GroupController.prototype, "insert", null);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Put"])(':id/update'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Param"])('id')), tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Body"])()),
+        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Post"])('put'),
+        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["UsePipes"])(new _validation_pipe__WEBPACK_IMPORTED_MODULE_4__["ValidationPipe"]()),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Body"])()),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object, typeof (_e = typeof _employee_entity__WEBPACK_IMPORTED_MODULE_3__["Employee"] !== "undefined" && _employee_entity__WEBPACK_IMPORTED_MODULE_3__["Employee"]) === "function" ? _e : Object]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", typeof (_f = typeof Promise !== "undefined" && Promise) === "function" ? _f : Object)
-    ], EmployeeController.prototype, "update", null);
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_d = typeof _group_create_group_dto__WEBPACK_IMPORTED_MODULE_2__["CreateGroupDto"] !== "undefined" && _group_create_group_dto__WEBPACK_IMPORTED_MODULE_2__["CreateGroupDto"]) === "function" ? _d : Object]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", typeof (_e = typeof Promise !== "undefined" && Promise) === "function" ? _e : Object)
+    ], GroupController.prototype, "update", null);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Delete"])(':id/delete'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Param"])('id')),
+        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Post"])('delete/one'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Body"])()),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", typeof (_f = typeof Promise !== "undefined" && Promise) === "function" ? _f : Object)
+    ], GroupController.prototype, "deleteone", null);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Post"])('delete/many'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Body"])()),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Array]),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", typeof (_g = typeof Promise !== "undefined" && Promise) === "function" ? _g : Object)
-    ], EmployeeController.prototype, "delete", null);
-    EmployeeController = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Controller"])('employee'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_h = typeof _employee_service__WEBPACK_IMPORTED_MODULE_2__["EmployeeService"] !== "undefined" && _employee_service__WEBPACK_IMPORTED_MODULE_2__["EmployeeService"]) === "function" ? _h : Object])
-    ], EmployeeController);
-    return EmployeeController;
+    ], GroupController.prototype, "deletemany", null);
+    GroupController = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Controller"])('group'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_h = typeof _group_service__WEBPACK_IMPORTED_MODULE_3__["GroupService"] !== "undefined" && _group_service__WEBPACK_IMPORTED_MODULE_3__["GroupService"]) === "function" ? _h : Object])
+    ], GroupController);
+    return GroupController;
 }());
 
 
 
 /***/ }),
 
-/***/ "./apps/api/src/app/employees/employee.entity.ts":
-/*!*******************************************************!*\
-  !*** ./apps/api/src/app/employees/employee.entity.ts ***!
-  \*******************************************************/
-/*! exports provided: Employee */
+/***/ "./apps/api/src/app/group/group.entity.ts":
+/*!************************************************!*\
+  !*** ./apps/api/src/app/group/group.entity.ts ***!
+  \************************************************/
+/*! exports provided: Group */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Employee", function() { return Employee; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Group", function() { return Group; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "tslib");
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! typeorm */ "typeorm");
 /* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(typeorm__WEBPACK_IMPORTED_MODULE_1__);
 
 
-var Employee = /** @class */ (function () {
-    function Employee() {
+var Group = /** @class */ (function () {
+    function Group() {
     }
-    var _a;
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["PrimaryColumn"])(),
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["PrimaryColumn"])('character varying', { length: 20 }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Group.prototype, "company", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["PrimaryColumn"])('character varying', { length: 20 }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Group.prototype, "lang", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["PrimaryColumn"])('character varying', { length: 20 }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Group.prototype, "code", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('character varying', { length: 100 }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Group.prototype, "name", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('boolean'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Boolean)
+    ], Group.prototype, "active_flag", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('character varying', { length: 20, nullable: true }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Group.prototype, "department_code", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('character varying', { length: 250, nullable: true }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Group.prototype, "address1", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('character varying', { length: 250, nullable: true }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Group.prototype, "address2", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('character varying', { length: 50, nullable: true }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Group.prototype, "tel1", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('character varying', { length: 50, nullable: true }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Group.prototype, "tel2", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('character varying', { length: 50, nullable: true }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Group.prototype, "email", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('integer'),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
-    ], Employee.prototype, "idEmployee", void 0);
+    ], Group.prototype, "change_count", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('text'),
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('character varying', { length: 20 }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
-    ], Employee.prototype, "fullName", void 0);
+    ], Group.prototype, "create_emp_id", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('text'),
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('timestamp without time zone'),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
-    ], Employee.prototype, "address", void 0);
+    ], Group.prototype, "create_datetime", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('boolean'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Boolean)
-    ], Employee.prototype, "genDer", void 0);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('date'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", typeof (_a = typeof Date !== "undefined" && Date) === "function" ? _a : Object)
-    ], Employee.prototype, "birthday", void 0);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('text'),
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('character varying', { length: 20 }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
-    ], Employee.prototype, "mobile", void 0);
+    ], Group.prototype, "change_emp_id", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('text'),
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('timestamp without time zone'),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
-    ], Employee.prototype, "email", void 0);
+    ], Group.prototype, "change_datetime", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('boolean'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Boolean)
-    ], Employee.prototype, "admin", void 0);
-    Employee = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Entity"])('employees')
-    ], Employee);
-    return Employee;
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('character', { length: 1 }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Group.prototype, "data_flag", void 0);
+    Group = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Entity"])('biz_m_group')
+    ], Group);
+    return Group;
 }());
 
 
 
 /***/ }),
 
-/***/ "./apps/api/src/app/employees/employee.module.ts":
-/*!*******************************************************!*\
-  !*** ./apps/api/src/app/employees/employee.module.ts ***!
-  \*******************************************************/
-/*! exports provided: EmployeeModule */
+/***/ "./apps/api/src/app/group/group.service.ts":
+/*!*************************************************!*\
+  !*** ./apps/api/src/app/group/group.service.ts ***!
+  \*************************************************/
+/*! exports provided: GroupService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmployeeModule", function() { return EmployeeModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GroupService", function() { return GroupService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "tslib");
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
 /* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @nestjs/typeorm */ "@nestjs/typeorm");
 /* harmony import */ var _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _employee_entity__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./employee.entity */ "./apps/api/src/app/employees/employee.entity.ts");
-/* harmony import */ var _employee_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./employee.service */ "./apps/api/src/app/employees/employee.service.ts");
-/* harmony import */ var _employee_controller__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./employee.controller */ "./apps/api/src/app/employees/employee.controller.ts");
+/* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! typeorm */ "typeorm");
+/* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(typeorm__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _group_entity__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./group.entity */ "./apps/api/src/app/group/group.entity.ts");
 
 
 
 
 
-
-var EmployeeModule = /** @class */ (function () {
-    function EmployeeModule() {
+var GroupService = /** @class */ (function () {
+    function GroupService(groupRepository) {
+        this.groupRepository = groupRepository;
     }
-    EmployeeModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Module"])({
-            imports: [_nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__["TypeOrmModule"].forFeature([_employee_entity__WEBPACK_IMPORTED_MODULE_3__["Employee"]])],
-            providers: [_employee_service__WEBPACK_IMPORTED_MODULE_4__["EmployeeService"]],
-            controllers: [_employee_controller__WEBPACK_IMPORTED_MODULE_5__["EmployeeController"]],
-        })
-    ], EmployeeModule);
-    return EmployeeModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./apps/api/src/app/employees/employee.service.ts":
-/*!********************************************************!*\
-  !*** ./apps/api/src/app/employees/employee.service.ts ***!
-  \********************************************************/
-/*! exports provided: EmployeeService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmployeeService", function() { return EmployeeService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "tslib");
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
-/* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @nestjs/typeorm */ "@nestjs/typeorm");
-/* harmony import */ var _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _employee_entity__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./employee.entity */ "./apps/api/src/app/employees/employee.entity.ts");
-/* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! typeorm */ "typeorm");
-/* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(typeorm__WEBPACK_IMPORTED_MODULE_4__);
-
-
-
-
-
-var EmployeeService = /** @class */ (function () {
-    function EmployeeService(employeeRepository) {
-        this.employeeRepository = employeeRepository;
-    }
-    EmployeeService.prototype.findAll = function () {
+    GroupService.prototype.findAll = function (context) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var params, list, result, index, index, index, index, index, index, index, index, index, index, dateFrom, sortListByDate, indexFrom, dateTo_1, sortListByDate, indexTo;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        params = new Object();
+                        list = [];
+                        if (context.name !== undefined) {
+                            params['name'] = context.name;
+                        }
+                        if (context.activeFlag !== undefined) {
+                            params['active_flag'] = context.activeFlag;
+                        }
+                        if (context.address1 !== undefined) {
+                            params['address1'] = context.address1;
+                        }
+                        if (context.address2 !== undefined) {
+                            params['address2'] = context.address2;
+                        }
+                        if (context.tel1 !== undefined) {
+                            params['tel1'] = context.tel1;
+                        }
+                        if (context.tel2 !== undefined) {
+                            params['tel2'] = context.tel2;
+                        }
+                        if (context.email !== undefined) {
+                            params['email'] = context.email;
+                        }
+                        if (context.changeCount !== undefined) {
+                            params['change_count'] = context.changeCount;
+                        }
+                        if (context.dataFlag !== undefined) {
+                            params['data_flag'] = context.dataFlag;
+                        }
+                        return [4 /*yield*/, this.groupRepository.find(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({ company: context.company, lang: context.lang }, params))];
+                    case 1:
+                        result = _a.sent();
+                        list = result.slice();
+                        // form to groupcode
+                        if (context.codeFrom !== undefined) {
+                            index = list.findIndex(function (element) {
+                                return element.code === context.codeFrom;
+                            });
+                            if (index >= 0) {
+                                list = list.slice(index);
+                            }
+                        }
+                        if (context.codeTo !== undefined) {
+                            index = list.findIndex(function (element) {
+                                return element.code === context.codeTo;
+                            });
+                            if (index >= 0) {
+                                list = list.slice(0, index + 1);
+                            }
+                        }
+                        // form to department_code
+                        if (context.department_codeFrom !== undefined) {
+                            index = list.findIndex(function (element) {
+                                return element.department_code === context.department_codeFrom;
+                            });
+                            if (index >= 0) {
+                                list = list.slice(index);
+                            }
+                        }
+                        if (context.department_codeTo !== undefined) {
+                            index = list.findIndex(function (element) {
+                                return element.department_code === context.department_codeTo;
+                            });
+                            if (index >= 0) {
+                                list = list.slice(0, index + 1);
+                            }
+                        }
+                        // from to create_emp_id
+                        if (context.createEmpFrom !== undefined) {
+                            index = list.findIndex(function (element) {
+                                return element.create_emp_id === context.createEmpFrom;
+                            });
+                            if (index >= 0) {
+                                list = list.slice(index, list.length);
+                            }
+                        }
+                        if (context.createEmpTo !== undefined) {
+                            index = list.findIndex(function (element) {
+                                return element.create_emp_id === context.createEmpTo;
+                            });
+                            if (index >= 0) {
+                                list = list.slice(0, index + 1);
+                            }
+                        }
+                        // from to change_emp_id
+                        if (context.changeEmpFrom !== undefined) {
+                            index = list.findIndex(function (element) {
+                                return element.change_emp_id === context.changeEmpFrom;
+                            });
+                            if (index >= 0) {
+                                list = list.slice(index, list.length);
+                            }
+                        }
+                        if (context.changeEmpTo !== undefined) {
+                            index = list.findIndex(function (element) {
+                                return element.change_emp_id === context.changeEmpTo;
+                            });
+                            if (index >= 0) {
+                                list = list.slice(0, index + 1);
+                            }
+                        }
+                        // from to create_datetime
+                        if (context.createDatetimeFrom !== undefined) {
+                            index = list.findIndex(function (element) {
+                                return element.create_datetime === new Date(context.createDatetimeFrom);
+                            });
+                            if (index >= 0) {
+                                list = list.slice(index, list.length);
+                            }
+                        }
+                        if (context.createDatetimeTo !== undefined) {
+                            index = list.findIndex(function (element) {
+                                return element.create_datetime === context.createDatetimeTo;
+                            });
+                            if (index >= 0) {
+                                list = list.slice(0, index + 1);
+                            }
+                        }
+                        // from to change_datetime
+                        if (context.changeDatetimeFrom !== undefined) {
+                            dateFrom = new Date(context.changeDatetimeFrom);
+                            sortListByDate = list.sort(function (a, b) { return a.change_datetime - b.change_datetime; });
+                            indexFrom = sortListByDate.findIndex(function (element) {
+                                return new Date(element.change_datetime + "+0000").toJSON() >= new Date(context.changeDatetimeFrom).toJSON();
+                            });
+                            if (new Date(sortListByDate[sortListByDate.length - 1].change_datetime + "+0000").toJSON() < dateFrom.toJSON()) {
+                                console.log(new Date(sortListByDate[sortListByDate.length - 1].change_datetime + "+0000").toJSON(), dateFrom.toJSON());
+                                list = [];
+                            }
+                            if (indexFrom >= 0) {
+                                list = sortListByDate.slice(indexFrom, sortListByDate.length);
+                            }
+                        }
+                        if (context.changeDatetimeTo !== undefined) {
+                            dateTo_1 = new Date(context.changeDatetimeTo);
+                            dateTo_1.setMinutes(dateTo_1.getMinutes() + 1439);
+                            sortListByDate = list.sort(function (a, b) { return b.change_datetime - a.change_datetime; });
+                            indexTo = list.findIndex(function (element) {
+                                return new Date(element.change_datetime + "+0000").toJSON() < dateTo_1.toJSON();
+                            });
+                            if (indexTo >= 0) {
+                                list = sortListByDate.slice(indexTo, sortListByDate.length);
+                            }
+                            else {
+                                list = [];
+                            }
+                        }
+                        return [2 /*return*/, list];
+                }
+            });
+        });
+    };
+    GroupService.prototype.findOne = function (context) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.employeeRepository.find()];
-                    case 1: return [2 /*return*/, _a.sent()];
+                    case 0:
+                        if (!(context.code !== '')) return [3 /*break*/, 2];
+                        return [4 /*yield*/, this.groupRepository.findOne({
+                                company: context.company,
+                                lang: context.lang,
+                                code: context.code
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/, true];
+                    case 2: return [2 /*return*/, false];
                 }
             });
         });
     };
-    EmployeeService.prototype.findId = function (id) {
+    // CREATE GROUP WITH 3 LANGUAGE WITH SAME BODY REQ
+    GroupService.prototype.create = function (context) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var result, ts, contextVi, contextEn, contextJa;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.employeeRepository.findOne(id)];
-                    case 1: return [2 /*return*/, _a.sent()];
+                    case 0:
+                        if (!(context.code !== '')) return [3 /*break*/, 6];
+                        return [4 /*yield*/, this.groupRepository.find({
+                                company: context.company,
+                                code: context.code
+                            })];
+                    case 1:
+                        result = _a.sent();
+                        console.log(result.length);
+                        if (!(result.length <= 0)) return [3 /*break*/, 5];
+                        ts = new Date();
+                        contextVi = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, context);
+                        contextVi.lang = 'vi-VN';
+                        contextVi.change_count = context.change_count || 0;
+                        contextVi.create_datetime = ts.toJSON();
+                        contextEn = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, context);
+                        contextEn.lang = 'en-US';
+                        contextEn.change_count = context.change_count || 0;
+                        contextEn.create_datetime = ts.toJSON();
+                        contextJa = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, context);
+                        contextJa.lang = 'jp-JP';
+                        contextJa.change_count = context.change_count || 0;
+                        contextJa.create_datetime = ts.toJSON();
+                        return [4 /*yield*/, this.groupRepository.save(contextVi)];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, this.groupRepository.save(contextEn)];
+                    case 3:
+                        _a.sent();
+                        return [4 /*yield*/, this.groupRepository.save(contextJa)];
+                    case 4:
+                        _a.sent();
+                        return [2 /*return*/, true];
+                    case 5: return [2 /*return*/, false];
+                    case 6: return [2 /*return*/, false];
                 }
             });
         });
     };
-    EmployeeService.prototype.create = function (Employee) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
+    // UPDATE GROUP WITH 3 LANGUAGE WITH SAME BODY REQ
+    GroupService.prototype.update = function (context) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var result, ts, contextLang;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.employeeRepository.save(Employee)];
-                    case 1: return [2 /*return*/, _a.sent()];
+                    case 0:
+                        if (!(context.code !== '')) return [3 /*break*/, 11];
+                        return [4 /*yield*/, this.groupRepository.find({
+                                lang: context.lang,
+                                company: context.company,
+                                code: context.code
+                            })];
+                    case 1:
+                        result = _a.sent();
+                        console.log(result[0].change_count);
+                        if (!(result[0].change_count === context.change_count)) return [3 /*break*/, 10];
+                        if (!(result[0].active_flag === true)) return [3 /*break*/, 9];
+                        if (!result) return [3 /*break*/, 8];
+                        ts = new Date();
+                        contextLang = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, context);
+                        if (!(contextLang.lang === 'vi-VN')) return [3 /*break*/, 3];
+                        context.lang = 'vi-VN';
+                        context.change_count++;
+                        context.change_datetime = ts.toJSON();
+                        return [4 /*yield*/, this.groupRepository.update({
+                                company: context.company,
+                                lang: context.lang,
+                                code: context.code
+                            }, context)];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/, true];
+                    case 3:
+                        if (!(contextLang.lang === 'en-US')) return [3 /*break*/, 5];
+                        context.lang = 'en-US';
+                        context.change_count++;
+                        context.change_datetime = ts.toJSON();
+                        return [4 /*yield*/, this.groupRepository.update({
+                                company: context.company,
+                                lang: context.lang,
+                                code: context.code
+                            }, context)];
+                    case 4:
+                        _a.sent();
+                        return [2 /*return*/, true];
+                    case 5:
+                        if (!(contextLang.lang === 'jp-JP')) return [3 /*break*/, 7];
+                        context.lang = 'jp-JP';
+                        context.change_count++;
+                        context.change_datetime = ts.toJSON();
+                        return [4 /*yield*/, this.groupRepository.update({
+                                company: context.company,
+                                lang: context.lang,
+                                code: context.code
+                            }, context)];
+                    case 6:
+                        _a.sent();
+                        return [2 /*return*/, true];
+                    case 7: return [2 /*return*/, true];
+                    case 8: return [2 /*return*/, true];
+                    case 9: return [2 /*return*/, false];
+                    case 10: return [2 /*return*/, false];
+                    case 11: return [2 /*return*/, false];
                 }
             });
         });
     };
-    EmployeeService.prototype.update = function (Employee) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
+    GroupService.prototype.deleteOne = function (context) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var result, contextVi, contextEn, contextJa, group_keyVi, group_keyEn, group_keyJa;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.employeeRepository.update(Employee.idEmployee, Employee)];
-                    case 1: return [2 /*return*/, _a.sent()];
+                    case 0:
+                        if (!(context.code !== '')) return [3 /*break*/, 6];
+                        return [4 /*yield*/, this.groupRepository.find({
+                                company: context.company,
+                                code: context.code,
+                            })];
+                    case 1:
+                        result = _a.sent();
+                        if (!(result.length > 0)) return [3 /*break*/, 5];
+                        contextVi = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, context);
+                        contextVi.lang = 'vi-VN';
+                        contextEn = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, context);
+                        contextEn.lang = 'en-US';
+                        contextJa = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, context);
+                        contextJa.lang = 'ja-JP';
+                        group_keyVi = {
+                            company: contextVi.company,
+                            lang: contextVi.lang,
+                            code: contextVi.code
+                        };
+                        group_keyEn = {
+                            company: contextEn.company,
+                            lang: contextEn.lang,
+                            code: contextEn.code
+                        };
+                        group_keyJa = {
+                            company: contextJa.company,
+                            lang: contextJa.lang,
+                            code: contextJa.code
+                        };
+                        return [4 /*yield*/, this.groupRepository.delete(group_keyVi)];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, this.groupRepository.delete(group_keyEn)];
+                    case 3:
+                        _a.sent();
+                        return [4 /*yield*/, this.groupRepository.delete(group_keyJa)];
+                    case 4:
+                        _a.sent();
+                        return [2 /*return*/, true];
+                    case 5: return [2 /*return*/, false];
+                    case 6: return [2 /*return*/, false];
                 }
             });
         });
     };
-    EmployeeService.prototype.delete = function (id) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
+    GroupService.prototype.deleteMany = function (context) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _i, context_1, element, result, elementVi, group_keyVi, elementEn, group_keyEn, elementJa, group_keyJa;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.employeeRepository.delete(id)];
-                    case 1: return [2 /*return*/, _a.sent()];
+                    case 0:
+                        _i = 0, context_1 = context;
+                        _a.label = 1;
+                    case 1:
+                        if (!(_i < context_1.length)) return [3 /*break*/, 9];
+                        element = context_1[_i];
+                        if (!(element.code !== '')) return [3 /*break*/, 7];
+                        return [4 /*yield*/, this.groupRepository.find({
+                                company: element.company,
+                                code: element.code
+                            })];
+                    case 2:
+                        result = _a.sent();
+                        if (!(result.length > 0)) return [3 /*break*/, 6];
+                        elementVi = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, element);
+                        elementVi.lang = 'vi-VN';
+                        group_keyVi = {
+                            company: elementVi.company,
+                            lang: elementVi.lang,
+                            code: elementVi.code
+                        };
+                        return [4 /*yield*/, this.groupRepository.delete(group_keyVi)];
+                    case 3:
+                        _a.sent();
+                        elementEn = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, element);
+                        elementEn.lang = 'en-US';
+                        group_keyEn = {
+                            company: elementEn.company,
+                            lang: elementEn.lang,
+                            code: elementEn.code
+                        };
+                        return [4 /*yield*/, this.groupRepository.delete(group_keyEn)];
+                    case 4:
+                        _a.sent();
+                        elementJa = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, element);
+                        elementJa.lang = 'ja-JP';
+                        group_keyJa = {
+                            company: elementJa.company,
+                            lang: elementJa.lang,
+                            code: elementJa.code
+                        };
+                        return [4 /*yield*/, this.groupRepository.delete(group_keyJa)];
+                    case 5:
+                        _a.sent();
+                        return [2 /*return*/, true];
+                    case 6: return [2 /*return*/, false];
+                    case 7: return [2 /*return*/, false];
+                    case 8:
+                        _i++;
+                        return [3 /*break*/, 1];
+                    case 9: return [2 /*return*/];
                 }
             });
         });
     };
     var _a;
-    EmployeeService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    GroupService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__["InjectRepository"])(_employee_entity__WEBPACK_IMPORTED_MODULE_3__["Employee"])),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_a = typeof typeorm__WEBPACK_IMPORTED_MODULE_4__["Repository"] !== "undefined" && typeorm__WEBPACK_IMPORTED_MODULE_4__["Repository"]) === "function" ? _a : Object])
-    ], EmployeeService);
-    return EmployeeService;
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__["InjectRepository"])(_group_entity__WEBPACK_IMPORTED_MODULE_4__["Group"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_a = typeof typeorm__WEBPACK_IMPORTED_MODULE_3__["Repository"] !== "undefined" && typeorm__WEBPACK_IMPORTED_MODULE_3__["Repository"]) === "function" ? _a : Object])
+    ], GroupService);
+    return GroupService;
 }());
 
 
 
 /***/ }),
 
-/***/ "./apps/api/src/app/position/position.controller.ts":
-/*!**********************************************************!*\
-  !*** ./apps/api/src/app/position/position.controller.ts ***!
-  \**********************************************************/
-/*! exports provided: PositionController */
+/***/ "./apps/api/src/app/person/person.controller.ts":
+/*!******************************************************!*\
+  !*** ./apps/api/src/app/person/person.controller.ts ***!
+  \******************************************************/
+/*! exports provided: PersonController */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PositionController", function() { return PositionController; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PersonController", function() { return PersonController; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "tslib");
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
 /* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _position_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./position.service */ "./apps/api/src/app/position/position.service.ts");
-/* harmony import */ var _position_entity__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./position.entity */ "./apps/api/src/app/position/position.entity.ts");
+/* harmony import */ var _person_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./person.service */ "./apps/api/src/app/person/person.service.ts");
+/* harmony import */ var _person_entity__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./person.entity */ "./apps/api/src/app/person/person.entity.ts");
 
 
 
 
-var PositionController = /** @class */ (function () {
-    function PositionController(positionService) {
-        this.positionService = positionService;
+var PersonController = /** @class */ (function () {
+    function PersonController(personService) {
+        this.personService = personService;
     }
-    PositionController.prototype.index = function () {
-        return this.positionService.findAll();
+    PersonController.prototype.index = function () {
+        return this.personService.findAll();
     };
-    PositionController.prototype.create = function (employData) {
+    PersonController.prototype.create = function (person) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                return [2 /*return*/, this.positionService.create(employData)];
+                return [2 /*return*/, this.personService.create(person)];
             });
         });
     };
-    PositionController.prototype.update = function (id, posiData) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                posiData.idPosition = id;
-                console.log('Update #' + posiData.idPosition);
-                return [2 /*return*/, this.positionService.update(posiData)];
-            });
-        });
-    };
-    PositionController.prototype.delete = function (id) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                return [2 /*return*/, this.positionService.delete(id)];
-            });
-        });
-    };
-    var _a, _b, _c, _d, _e, _f, _g;
+    var _a, _b, _c, _d;
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Get"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", []),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", typeof (_a = typeof Promise !== "undefined" && Promise) === "function" ? _a : Object)
-    ], PositionController.prototype, "index", null);
+    ], PersonController.prototype, "index", null);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Post"])('create'),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Body"])()),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_b = typeof _position_entity__WEBPACK_IMPORTED_MODULE_3__["Position"] !== "undefined" && _position_entity__WEBPACK_IMPORTED_MODULE_3__["Position"]) === "function" ? _b : Object]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_b = typeof _person_entity__WEBPACK_IMPORTED_MODULE_3__["Person"] !== "undefined" && _person_entity__WEBPACK_IMPORTED_MODULE_3__["Person"]) === "function" ? _b : Object]),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", typeof (_c = typeof Promise !== "undefined" && Promise) === "function" ? _c : Object)
-    ], PositionController.prototype, "create", null);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Put"])(':id/update'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Param"])('id')), tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Body"])()),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object, typeof (_d = typeof _position_entity__WEBPACK_IMPORTED_MODULE_3__["Position"] !== "undefined" && _position_entity__WEBPACK_IMPORTED_MODULE_3__["Position"]) === "function" ? _d : Object]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", typeof (_e = typeof Promise !== "undefined" && Promise) === "function" ? _e : Object)
-    ], PositionController.prototype, "update", null);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Delete"])(':id/delete'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Param"])('id')),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", typeof (_f = typeof Promise !== "undefined" && Promise) === "function" ? _f : Object)
-    ], PositionController.prototype, "delete", null);
-    PositionController = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Controller"])('position'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_g = typeof _position_service__WEBPACK_IMPORTED_MODULE_2__["PositionService"] !== "undefined" && _position_service__WEBPACK_IMPORTED_MODULE_2__["PositionService"]) === "function" ? _g : Object])
-    ], PositionController);
-    return PositionController;
+    ], PersonController.prototype, "create", null);
+    PersonController = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Controller"])('person'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_d = typeof _person_service__WEBPACK_IMPORTED_MODULE_2__["PersonService"] !== "undefined" && _person_service__WEBPACK_IMPORTED_MODULE_2__["PersonService"]) === "function" ? _d : Object])
+    ], PersonController);
+    return PersonController;
 }());
 
 
 
 /***/ }),
 
-/***/ "./apps/api/src/app/position/position.entity.ts":
-/*!******************************************************!*\
-  !*** ./apps/api/src/app/position/position.entity.ts ***!
-  \******************************************************/
-/*! exports provided: Position */
+/***/ "./apps/api/src/app/person/person.entity.ts":
+/*!**************************************************!*\
+  !*** ./apps/api/src/app/person/person.entity.ts ***!
+  \**************************************************/
+/*! exports provided: Person */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Position", function() { return Position; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Person", function() { return Person; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "tslib");
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! typeorm */ "typeorm");
 /* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(typeorm__WEBPACK_IMPORTED_MODULE_1__);
 
 
-var Position = /** @class */ (function () {
-    function Position() {
+var Person = /** @class */ (function () {
+    function Person() {
     }
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["PrimaryColumn"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
-    ], Position.prototype, "idPosition", void 0);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('text'),
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["PrimaryColumn"])('character varying', { length: 20 }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
-    ], Position.prototype, "NamePosition", void 0);
-    Position = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Entity"])('position')
-    ], Position);
-    return Position;
+    ], Person.prototype, "company", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["PrimaryColumn"])('character varying', { length: 20 }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Person.prototype, "department_code", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["PrimaryColumn"])('character varying', { length: 20 }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Person.prototype, "group_code", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["PrimaryColumn"])('character varying', { length: 20 }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Person.prototype, "emp_id", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('boolean'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Boolean)
+    ], Person.prototype, "active_flag", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('character varying', { nullable: true }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Person.prototype, "position", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('character varying', { nullable: true }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Person.prototype, "rank", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('integer'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
+    ], Person.prototype, "change_count", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('character varying', { length: 20 }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Person.prototype, "create_emp_id", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('timestamp without time zone'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Person.prototype, "create_datetime", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('character varying', { length: 20 }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Person.prototype, "change_emp_id", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('timestamp without time zone'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Person.prototype, "change_datetime", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Column"])('character', { length: 1 }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], Person.prototype, "data_flag", void 0);
+    Person = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(typeorm__WEBPACK_IMPORTED_MODULE_1__["Entity"])('biz_m_person')
+    ], Person);
+    return Person;
 }());
 
 
 
 /***/ }),
 
-/***/ "./apps/api/src/app/position/position.module.ts":
-/*!******************************************************!*\
-  !*** ./apps/api/src/app/position/position.module.ts ***!
-  \******************************************************/
-/*! exports provided: PositionModule */
+/***/ "./apps/api/src/app/person/person.service.ts":
+/*!***************************************************!*\
+  !*** ./apps/api/src/app/person/person.service.ts ***!
+  \***************************************************/
+/*! exports provided: PersonService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PositionModule", function() { return PositionModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PersonService", function() { return PersonService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "tslib");
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
 /* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @nestjs/typeorm */ "@nestjs/typeorm");
 /* harmony import */ var _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _position_entity__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./position.entity */ "./apps/api/src/app/position/position.entity.ts");
-/* harmony import */ var _position_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./position.service */ "./apps/api/src/app/position/position.service.ts");
-/* harmony import */ var _position_controller__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./position.controller */ "./apps/api/src/app/position/position.controller.ts");
-
-
-
-
-
-
-var PositionModule = /** @class */ (function () {
-    function PositionModule() {
-    }
-    PositionModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Module"])({
-            imports: [_nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__["TypeOrmModule"].forFeature([_position_entity__WEBPACK_IMPORTED_MODULE_3__["Position"]])],
-            providers: [_position_service__WEBPACK_IMPORTED_MODULE_4__["PositionService"]],
-            controllers: [_position_controller__WEBPACK_IMPORTED_MODULE_5__["PositionController"]],
-        })
-    ], PositionModule);
-    return PositionModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./apps/api/src/app/position/position.service.ts":
-/*!*******************************************************!*\
-  !*** ./apps/api/src/app/position/position.service.ts ***!
-  \*******************************************************/
-/*! exports provided: PositionService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PositionService", function() { return PositionService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "tslib");
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
-/* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @nestjs/typeorm */ "@nestjs/typeorm");
-/* harmony import */ var _nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _position_entity__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./position.entity */ "./apps/api/src/app/position/position.entity.ts");
+/* harmony import */ var _person_entity__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./person.entity */ "./apps/api/src/app/person/person.entity.ts");
 /* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! typeorm */ "typeorm");
 /* harmony import */ var typeorm__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(typeorm__WEBPACK_IMPORTED_MODULE_4__);
 
@@ -1276,57 +1348,37 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var PositionService = /** @class */ (function () {
-    function PositionService(positionRepository) {
-        this.positionRepository = positionRepository;
+var PersonService = /** @class */ (function () {
+    function PersonService(personRepository) {
+        this.personRepository = personRepository;
     }
-    PositionService.prototype.findAll = function () {
+    PersonService.prototype.findAll = function () {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.positionRepository.find()];
+                    case 0: return [4 /*yield*/, this.personRepository.find()];
                     case 1: return [2 /*return*/, _a.sent()];
                 }
             });
         });
     };
-    PositionService.prototype.create = function (position) {
+    PersonService.prototype.create = function (group) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.positionRepository.save(position)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    PositionService.prototype.update = function (position) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.positionRepository.update(position.idPosition, position)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    PositionService.prototype.delete = function (id) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, Promise, function () {
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.positionRepository.delete(id)];
+                    case 0: return [4 /*yield*/, this.personRepository.save(group)];
                     case 1: return [2 /*return*/, _a.sent()];
                 }
             });
         });
     };
     var _a;
-    PositionService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    PersonService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__["InjectRepository"])(_position_entity__WEBPACK_IMPORTED_MODULE_3__["Position"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_nestjs_typeorm__WEBPACK_IMPORTED_MODULE_2__["InjectRepository"])(_person_entity__WEBPACK_IMPORTED_MODULE_3__["Person"])),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [typeof (_a = typeof typeorm__WEBPACK_IMPORTED_MODULE_4__["Repository"] !== "undefined" && typeorm__WEBPACK_IMPORTED_MODULE_4__["Repository"]) === "function" ? _a : Object])
-    ], PositionService);
-    return PositionService;
+    ], PersonService);
+    return PersonService;
 }());
 
 
@@ -1349,10 +1401,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
 /* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_nestjs_common__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app/app.module */ "./apps/api/src/app/app.module.ts");
+/* harmony import */ var _src_validation_pipe__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../src/validation.pipe */ "./apps/api/src/validation.pipe.ts");
 /**
  * This is not a production server yet!
  * This is only a minimal backend to get started.
  **/
+
 
 
 
@@ -1366,6 +1420,7 @@ function bootstrap() {
                 case 1:
                     app = _a.sent();
                     globalPrefix = 'api/v1';
+                    app.useGlobalPipes(new _src_validation_pipe__WEBPACK_IMPORTED_MODULE_4__["ValidationPipe"]());
                     app.setGlobalPrefix(globalPrefix);
                     app.enableCors();
                     port = process.env.port || 8080;
@@ -1383,6 +1438,87 @@ bootstrap();
 
 /***/ }),
 
+/***/ "./apps/api/src/validation.pipe.ts":
+/*!*****************************************!*\
+  !*** ./apps/api/src/validation.pipe.ts ***!
+  \*****************************************/
+/*! exports provided: ValidationPipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValidationPipe", function() { return ValidationPipe; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "tslib");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
+/* harmony import */ var _nestjs_common__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var class_transformer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! class-transformer */ "class-transformer");
+/* harmony import */ var class_transformer__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(class_transformer__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var class_validator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! class-validator */ "class-validator");
+/* harmony import */ var class_validator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(class_validator__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+var ValidationPipe = /** @class */ (function () {
+    function ValidationPipe() {
+    }
+    ValidationPipe.prototype.transform = function (value, metadata) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var metatype, object, errors;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (value instanceof Object && this.isEmpty(value)) {
+                            throw new _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpException"]('Validation failed: No body submitted', _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpStatus"].BAD_REQUEST);
+                        }
+                        metatype = metadata.metatype;
+                        if (!metatype || !this.toValidate(metatype)) {
+                            return [2 /*return*/, value];
+                        }
+                        object = Object(class_transformer__WEBPACK_IMPORTED_MODULE_2__["plainToClass"])(metatype, value);
+                        return [4 /*yield*/, Object(class_validator__WEBPACK_IMPORTED_MODULE_3__["validate"])(object)];
+                    case 1:
+                        errors = _a.sent();
+                        console.log(errors);
+                        if (errors.length > 0) {
+                            throw new _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpException"]("Validation failed: " + this.formatErrors(errors), _nestjs_common__WEBPACK_IMPORTED_MODULE_1__["HttpStatus"].BAD_REQUEST);
+                        }
+                        return [2 /*return*/, value];
+                }
+            });
+        });
+    };
+    ValidationPipe.prototype.toValidate = function (metatype) {
+        var types = [String, Boolean, Number, Array, Object];
+        return !types.find(function (type) { return metatype === type; });
+    };
+    ValidationPipe.prototype.formatErrors = function (errors) {
+        return errors
+            .map(function (err) {
+            for (var property in err.constraints) {
+                return err.constraints[property];
+            }
+        })
+            .join(', ');
+    };
+    ValidationPipe.prototype.isEmpty = function (value) {
+        if (Object.keys(value).length > 0) {
+            return false;
+        }
+        return true;
+    };
+    ValidationPipe = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_nestjs_common__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
+    ], ValidationPipe);
+    return ValidationPipe;
+}());
+
+
+
+/***/ }),
+
 /***/ 0:
 /*!************************************!*\
   !*** multi ./apps/api/src/main.ts ***!
@@ -1392,6 +1528,17 @@ bootstrap();
 
 module.exports = __webpack_require__(/*! D:\demoapp\Dev\nxnest-dev\myorg\apps\api\src\main.ts */"./apps/api/src/main.ts");
 
+
+/***/ }),
+
+/***/ "@aureole/core":
+/*!********************************!*\
+  !*** external "@aureole/core" ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@aureole/core");
 
 /***/ }),
 
@@ -1425,6 +1572,28 @@ module.exports = require("@nestjs/core");
 /***/ (function(module, exports) {
 
 module.exports = require("@nestjs/typeorm");
+
+/***/ }),
+
+/***/ "class-transformer":
+/*!************************************!*\
+  !*** external "class-transformer" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("class-transformer");
+
+/***/ }),
+
+/***/ "class-validator":
+/*!**********************************!*\
+  !*** external "class-validator" ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("class-validator");
 
 /***/ }),
 
